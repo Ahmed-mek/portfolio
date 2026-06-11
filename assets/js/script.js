@@ -228,3 +228,52 @@ projectDetailsBackBtn?.addEventListener("click", function () {
   }
   window.scrollTo(0, 0);
 });
+
+// Contact form AJAX submission
+form?.addEventListener("submit", async function (e) {
+  e.preventDefault();
+  
+  const originalBtnText = formBtn.innerHTML;
+  formBtn.setAttribute("disabled", "");
+  formBtn.innerHTML = `<ion-icon name="sync-outline" class="spin"></ion-icon> <span>Sending...</span>`;
+  
+  const formData = new FormData(form);
+  const data = {};
+  formData.forEach((value, key) => data[key] = value);
+  
+  try {
+    const response = await fetch("https://formsubmit.co/ajax/ahmedmikatronik@gmail.com", {
+      method: "POST",
+      headers: { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+    
+    if (response.ok) {
+      // Clear form inputs
+      form.reset();
+      formBtn.setAttribute("disabled", "");
+      
+      // Trigger toast notification
+      const toast = document.getElementById("toast-notification");
+      toast.classList.add("show");
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 4000);
+    } else {
+      throw new Error("Failed to send message.");
+    }
+  } catch (error) {
+    alert("Oops! There was a problem sending your message. Please try again later.");
+  } finally {
+    formBtn.innerHTML = originalBtnText;
+    // Recheck validity for button state
+    if (form.checkValidity()) {
+      formBtn.removeAttribute("disabled");
+    } else {
+      formBtn.setAttribute("disabled", "");
+    }
+  }
+});

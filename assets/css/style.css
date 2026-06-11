@@ -2072,3 +2072,49 @@ textarea.form-input::-webkit-resizer { display: none; }
 .markdown-container a:hover {
   color: var(--white-1);
 }
+
+/*-----------------------------------*\
+  # TOAST NOTIFICATION & SPIN ANIMATION
+\*-----------------------------------*/
+
+.toast-notification {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--onyx);
+  border: 1px solid var(--orange-yellow-crayola);
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-3);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 1000;
+  transform: translateY(150%);
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.toast-notification.show {
+  transform: translateY(0);
+}
+
+.toast-icon {
+  color: var(--orange-yellow-crayola);
+  font-size: 20px;
+}
+
+.toast-text {
+  color: var(--white-2);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+  display: inline-block !important;
+}
