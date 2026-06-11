@@ -1,0 +1,333 @@
+\documentclass[a4paper,10pt]{article}
+
+% CV tailored for Revotronics Labs — R&D Power & Embedded Electronics
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{roboto}
+\usepackage[margin=0.75in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pageanchor=false}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{cmap}
+\usepackage{xcolor}
+
+% ── Color Palette ────────────────────────────────────────────────────────────
+\definecolor{navyblue}{RGB}{18, 52, 86}
+
+% ── Layout ───────────────────────────────────────────────────────────────────
+\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=0.18in, topsep=2pt, itemsep=1.5pt, parsep=0pt}
+\titleformat{\section}[block]{\large\bfseries\color{navyblue}}{}{0pt}{\MakeUppercase}[\color{navyblue}\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+\pagenumbering{gobble}
+\raggedright
+
+
+% Sub-project heading inside Experience: bold title (left) + small italic date (right)
+\newcommand{\projectheading}[2]{%
+  \vspace{4pt}\noindent\textbf{#1} \hfill \textit{\small #2}\\%
+}
+
+
+\begin{document}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+%  HEADER
+% ═══════════════════════════════════════════════════════════════════════════════
+\begin{center}
+  {\LARGE \textbf{\color{navyblue}Ahmed Ahmed}}\\
+  \vspace{3pt}
+  {\large \textbf{R\&D Power \& Embedded Electronics Engineer}}\\
+  \vspace{4pt}
+  \small
+  Konya, Turkey
+  \;\textbullet\;
+  +90 552 313 55 38
+  \;\textbullet\;
+  \href{mailto:ahmedmikatronik@gmail.com}{ahmedmikatronik@gmail.com}
+  \;\textbullet\;
+  \href{https://www.linkedin.com/in/ahmedmekatronik/}{linkedin.com/in/ahmedmekatronik}
+  \;\textbullet\;
+  \href{https://github.com/Ahmed-mek/}{github.com/Ahmed-mek/}
+\end{center}
+
+\vspace{2pt}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+%  PROFESSIONAL SUMMARY
+% ═══════════════════════════════════════════════════════════════════════════════
+\section*{Professional Summary}
+R\&D engineer with 5+ years delivering embedded power systems, motor-driver architectures, and
+advanced PCBs for UAV and robotics applications. Proven track record across BLDC/ESC
+development, SMPS and BMS design, 200W wireless power transfer, STM32 firmware on FreeRTOS,
+and high-density KiCad PCB layout --- from concept through hardware validation.
+
+Hands-on experience in government-funded R\&D (TUBITAK), academic UAV research,
+electric-vehicle power systems, and industrial embedded platforms. Strong fit for Revotronics
+Labs combining motor-driver design, power-conversion expertise, real-time firmware development,
+and rigorous prototype-to-system delivery in demanding R\&D environments.
+
+% ═══════════════════════════════════════════════════════════════════════════════
+%  TECHNICAL SKILLS
+% ═══════════════════════════════════════════════════════════════════════════════
+\section*{Technical Skills}
+\begin{itemize}
+  \item \textbf{Power Electronics:} Motor drivers, BLDC motors, ESCs, FOC, Space Vector PWM,
+        Six-Step Commutation, PID control, buck/boost converters, gate drivers, SMPS, BMS,
+        battery charging, wireless power transfer (200W WPT), galvanic isolation,
+        high-current PCB design, power distribution, analog systems, ADC/DAC interfacing,
+        IC selection, signal filtering, EMC considerations.
+  \item \textbf{Embedded Firmware:} Embedded C/C++, bare-metal programming, FreeRTOS,
+        FreeRTOS-MPU, FreeRTOS+TCP, deterministic task management, fault monitoring,
+        real-time safety logic, DMA, UART, SPI, I2C, CAN, Modbus, SMBus, Ethernet,
+        TCP/IP, SD-card data logging.
+  \item \textbf{Microcontrollers \& Platforms:} STM32H7, STM32F7, STM32, RP2040, ESP32,
+        Arduino, NEXTION HMI, ToF sensors, Multi-IMU sensor arrays.
+  \item \textbf{PCB Design \& Hardware:} Schematic design, advanced KiCad PCB layout,
+        Altium Designer, Eagle, KiCad plugin development, high-density LED PCB,
+        power-management PCB design, oscilloscope, function generator, soldering,
+        hardware validation and debugging.
+  \item \textbf{UAV, Robotics \& Control:} UAV electronics, drone wireless charging,
+        flight controller architecture, ArduPilot/PX4 analysis, robotics control systems,
+        GPS-denied localization, Kalman Filtering, sensor fusion, ROS,
+        embedded Linux (3+ years daily use).
+  \item \textbf{Programming Languages:} C, C++, C\#, Python, MicroPython, JavaScript.
+  \item \textbf{Languages:} Arabic (native), Turkish (advanced --- C1), English (advanced).
+\end{itemize}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+%  EXPERIENCE
+% ═══════════════════════════════════════════════════════════════════════════════
+\section*{Experience}
+\textbf{Zenopix Technology} \hfill Konya, Turkey\\
+\textit{R\&D Embedded Systems Engineer} \hfill 2021--Present
+
+% ── Project 1 ─────────────────────────────────────────────────────────────────
+\projectheading{UAV Wireless Charging Station}{2026--Present \normalfont\small(Ongoing)}
+\begin{itemize}
+  \item Architected an integrated wireless charging platform for UAV applications, engineering
+        ground transmitter (Tx) and onboard receiver (Rx) power electronics for autonomous
+        drone charging cycles.
+  \item Developed a custom BMS architecture for UAV battery packs covering safe charging
+        profiles, real-time telemetry monitoring, battery-health optimization, and embedded
+        fault handling via SMBus communication.
+  \item Integrated power conversion, BMS, and embedded control requirements into an R\&D
+        platform aligned with UAV wireless power transfer, SMPS, and firmware development
+        objectives.
+\end{itemize}
+
+% ── Project 2 ─────────────────────────────────────────────────────────────────
+\projectheading{Industrial BLDC Motor Driver}{2026--Present \normalfont\small(Ongoing)}
+\begin{itemize}
+  \item Defined the architectural framework for a robust industrial BLDC motor driver
+        optimized for high-reliability operation in demanding electromechanical systems.
+  \item Formulated motor-control design requirements covering drive stages, control-loop
+        stability, protection logic, thermal robustness, gate driver selection, and
+        firmware interfaces.
+  \item Structured the hardware concept around FOC and Six-Step control, high-current PCB
+        layout, buck/boost-stage considerations, and hardware validation planning.
+\end{itemize}
+
+% ── Project 3 ─────────────────────────────────────────────────────────────────
+\projectheading{Hologram Fan System --- TUBITAK R\&D Project}{2024--2026}
+\begin{itemize}
+  \item Engineered a custom 0.5-meter high-density LED PCB for a Persistence of Vision
+        display, selecting high-performance LEDs and driver ICs capable of high-frequency
+        switching.
+  \item Designed high-current KiCad PCBs with strict galvanic isolation between power
+        electronics and high-speed control circuitry for safer operation and cleaner signal
+        behavior.
+  \item Implemented BLDC motor-control algorithms including FOC, Space Vector PWM,
+        Six-Step Commutation, and PID loops to regulate speed stability and display
+        synchronization.
+  \item Architected STM32 firmware with FreeRTOS for deterministic task management,
+        real-time safety monitoring, fault detection, error handling, and system recovery.
+  \item Developed a resonance-based wireless power transfer system by designing customized
+        Tx/Rx circuits and achieving continuous 200W power transmission.
+  \item Applied Fuzzy Logic Control to dynamically regulate wireless power delivery and
+        improve transfer stability under varying operating conditions.
+  \item Validated power electronics, PCB assemblies, and embedded control behavior using
+        oscilloscopes, function generators, rapid prototyping, soldering, and hands-on
+        hardware debugging.
+\end{itemize}
+
+% ── Project 4 ─────────────────────────────────────────────────────────────────
+\projectheading{End-to-End Control System --- Abrasion Tester Machine}{2021--2023}
+\begin{itemize}
+  \item Built the complete signal-processing pipeline for accurate sensor-data acquisition
+        using digital filtering, analog filtering, and embedded measurement logic over SPI
+        and I2C interfaces.
+  \item Developed a custom DC motor driver with PID algorithms for accurate speed
+        calibration and repeatable mechanical testing.
+  \item Programmed a PC-based C\# graphical user interface to control the machine, monitor
+        operating behavior, and log test data in real time via UART communication.
+  \item Delivered the control-board hardware and firmware from concept through debugging,
+        calibration, and operational validation.
+\end{itemize}
+
+% ── Project 5 ─────────────────────────────────────────────────────────────────
+\projectheading{Embedded Interface Development \& UI Simulation}{2021--2022}
+\begin{itemize}
+  \item Developed an interactive JavaScript/CSS lighting simulation demonstrating
+        environmental lighting effects for customer-facing product visualization.
+  \item Launched four localized multilingual corporate websites and implemented SEO
+        optimizations to improve online discoverability.
+\end{itemize}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+%  PROJECTS
+% ═══════════════════════════════════════════════════════════════════════════════
+\section*{Projects}
+
+\textbf{Indoor Unmanned Vehicle Localization for Drift Reduction Using Multi-IMU Sensor Fusion}
+\hfill 2025--Present\\
+\textit{Master's Thesis | Multi-IMU, Sensor Fusion, STM32H7, FreeRTOS, Kalman Filtering}
+\begin{itemize}
+  \item Built a high-performance embedded system using STM32H7 to process approximately
+        250 raw data channels from a custom Multi-IMU hardware array in real time over
+        SPI and I2C buses.
+  \item Implemented FreeRTOS, FreeRTOS-MPU, and FreeRTOS+TCP for deterministic
+        multitasking, memory protection, robust network communication, and scalable
+        firmware architecture.
+  \item Developed Kalman Filtering and sensor-fusion algorithms to estimate navigation
+        states and reduce drift in GPS-denied UAV and robotics environments.
+  \item Integrated DMA-driven data acquisition, Ethernet communication, and real-time
+        processing into a research platform applicable to autonomous vehicles and embedded
+        control.
+\end{itemize}
+
+\vspace{3pt}
+\textbf{Flight Controller Architecture \& Prototyping --- ArduPilot / PX4}
+\hfill 2025--Present\\
+\textit{Project | ArduPilot, PX4, Flight Controller, PCB Design, Sensor Isolation}
+\begin{itemize}
+  \item Conducted architectural analysis and reverse engineering of ArduPilot and PX4
+        flight stacks to define hardware, firmware, and communication protocol requirements
+        for a custom UAV flight controller.
+  \item Designed the first iteration of a custom flight-controller PCB with attention to
+        sensor isolation, power distribution, component placement, and KiCad layout
+        constraints.
+  \item Formulated a bare-metal firmware strategy around control loops, sensor fusion,
+        embedded safety behavior, and future UAV ecosystem compatibility.
+\end{itemize}
+
+\vspace{3pt}
+\textbf{Laser Vibrometer PCB \& System Design} \hfill 2024\\
+\textit{Freelance | PCB Design, Power Management, Sensors, Data Logging}
+\begin{itemize}
+  \item Designed a custom PCB with battery charging, power-management circuitry, precision
+        laser control, and embedded measurement interfaces over I2C and UART.
+  \item Integrated ToF sensor for accurate distance and vibration measurement in an
+        embedded instrumentation platform.
+  \item Developed PC communication protocols and high-speed SD-card data logging to
+        support repeatable test capture and analysis.
+\end{itemize}
+
+\vspace{3pt}
+\textbf{Temperature Control System --- Cosmetic Medical Device Furnace} \hfill 2023\\
+\textit{Freelance | Embedded Systems, PCB Design, PID Control}
+\begin{itemize}
+  \item Designed the hardware layout and primary control PCB for a specialized medical
+        thermal-control device.
+  \item Implemented PID control algorithms to maintain accurate and stable furnace
+        temperature regulation.
+  \item Programmed an interactive NEXTION HMI interface for operator control and
+        real-time monitoring via UART communication.
+\end{itemize}
+
+\vspace{3pt}
+\textbf{International Efficiency Challenge Electric Vehicle Races --- Electromobile Category}
+\hfill 2024--2025\\
+\textit{Competition | Motor Driver, Power Supply, BMS, SMPS, EV}
+\begin{itemize}
+  \item Designed a motor driver for a 4.5\,kW, 72V BLDC motor used in an electric vehicle
+        competition platform.
+  \item Designed a 3\,kW power supply based on a 220V-to-72V AC transformer for
+        induction-load inspection tests.
+  \item Researched and supported Battery Management System (BMS) development for
+        electric-vehicle energy storage and protection via CAN communication.
+  \item Contributed to the design of a local charging unit applying SMPS topologies and
+        power-conversion principles.
+  \item Coordinated project delivery, technical execution, and team performance under
+        competition deadlines.
+\end{itemize}
+
+\vspace{3pt}
+\textbf{Hyperloop Development Competition} \hfill 2023\\
+\textit{Competition | STM32F7, Ethernet, TCP/IP, Embedded Networking}
+\begin{itemize}
+  \item Designed a data-transmission system between the train and monitoring station using
+        STM32F7 Ethernet capability and a TCP/IP stack.
+  \item Deployed a TCP-based communication path through router and Wi-Fi infrastructure
+        for computer-side monitoring.
+  \item Validated embedded network communication concepts applicable to high-speed robotics
+        and autonomous transportation systems.
+\end{itemize}
+
+\vspace{3pt}
+\textbf{POSYAK Medical Assistive Device --- Barrier-Free Living Technologies} \hfill 2022\\
+\textit{Competition | Wearable, Motion Sensing, Mobile App}
+\begin{itemize}
+  \item Developed a wearable assistive device for Parkinson's patients that generated
+        posture alerts when neck remained bent beyond a defined duration threshold.
+  \item Integrated I2C-based IMU motion-data collection with a mobile application to
+        record and process head-movement behavior.
+\end{itemize}
+
+\vspace{3pt}
+\textbf{Additional Engineering Competitions and Early Technical Projects} \hfill 2014--2024\\
+\textit{Projects | UAV, Robotics, Embedded Systems, Education}
+\begin{itemize}
+  \item Contributed to a Fighting UAV Competition project, participating in unmanned aerial
+        vehicle design and development tasks.
+  \item Contributed to an Agricultural Unmanned Ground Vehicle Competition focused on
+        autonomous ground-vehicle functionality for agricultural applications.
+  \item Designed and built a rotary-wing UAV for the International UAV Competition with
+        emphasis on agility, reliability, and embedded control efficiency.
+  \item Guided younger participants as a technical consultant in a Smart Transportation
+        Competition, supporting concept development and engineering execution.
+  \item Built educational-technology and quiz software using C\#, database integration,
+        authentication screens, scoring logic, and user-interface design.
+  \item Achieved first place in a middle-school electronics competition by accurately
+        assembling a random schematic circuit in the shortest time.
+\end{itemize}
+
+% ═══════════════════════════════════════════════════════════════════════════════
+%  EDUCATION
+% ═══════════════════════════════════════════════════════════════════════════════
+\section*{Education}
+
+\textbf{Necmettin Erbakan University} \hfill Konya, Turkey\\
+Master's Degree, Mechatronics Engineering \hfill 2024--Present
+
+\vspace{4pt}
+\textbf{Necmettin Erbakan University} \hfill Konya, Turkey\\
+Bachelor's Degree, Mechatronics Engineering \hfill 2020--2024\\
+GPA: 3.06\,/\,4.00 \quad \textit{Graduated with Honours (Onur Belgesi)}
+
+\vspace{4pt}
+\textbf{TOMER} \hfill Istanbul, Turkey\\
+Turkish Language Course, C1 Level \hfill 2019--2020
+
+\vspace{4pt}
+\textbf{AL KINDY High School} \hfill Kuwait\\
+High School, Natural Sciences \hfill 2016--2019
+
+% ═══════════════════════════════════════════════════════════════════════════════
+%  CERTIFICATIONS & AWARDS
+% ═══════════════════════════════════════════════════════════════════════════════
+\section*{Certifications \& Awards}
+\begin{itemize}
+  \item International Efficiency Challenge Electric Vehicle --- Teknofest Finalist, 2025.
+  \item International Efficiency Challenge Electric Vehicle --- Teknofest Finalist, 2024.
+  \item Graduation with Honours (Onur Belgesi) --- Necmettin Erbakan University, 2024.
+  \item Microcontroller Embedded C Programming: Absolute Beginners --- Udemy, 2023.
+  \item Mastering RTOS: Hands-on FreeRTOS and STM32Fx with Debugging --- Udemy, 2023.
+  \item Linux Training (Ubuntu) --- Komek, 2022.
+  \item First Aid Certification --- Komek, 2022.
+  \item Arduino Programming and Development Course --- Komek, 2021.
+\end{itemize}
+
+\end{document}
