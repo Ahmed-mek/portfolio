@@ -1976,13 +1976,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .markdown-container ul {
-  list-style-type: disc !important;
   padding-left: 25px !important;
   margin-bottom: 20px !important;
 }
 
 .markdown-container ol {
-  list-style-type: decimal !important;
   padding-left: 25px !important;
   margin-bottom: 20px !important;
 }
@@ -1992,6 +1990,24 @@ textarea.form-input::-webkit-resizer { display: none; }
   margin-bottom: 10px;
   line-height: 1.7;
   display: list-item !important;
+}
+
+.markdown-container ul li {
+  list-style-type: disc !important;
+}
+
+.markdown-container ol li {
+  list-style-type: decimal !important;
+}
+
+.markdown-container ul ul {
+  padding-left: 20px !important;
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+.markdown-container ul ul li {
+  list-style-type: circle !important;
 }
 
 .markdown-container li::marker {
