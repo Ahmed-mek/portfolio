@@ -201,7 +201,7 @@ for (let i = 0; i < projectItems.length; i++) {
 
     // Fetch and parse markdown
     try {
-      const response = await fetch(`./projects/${fileName}/${fileName}.md`);
+      const response = await fetch(`./projects-md/${fileName}.md`);
       if (!response.ok) throw new Error("File not found");
       const text = await response.text();
       markdownContainer.innerHTML = marked.parse(text);

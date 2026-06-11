@@ -1724,6 +1724,10 @@ textarea.form-input::-webkit-resizer { display: none; }
     box-shadow: var(--shadow-5);
   }
 
+  .article-title {
+    max-width: calc(100% - 460px);
+  }
+
 
 
   /**
